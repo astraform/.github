@@ -10,7 +10,7 @@ Astraform helps teams test proposed customer-facing AI changes against
 synthetic customer cohorts, business policies, tools, APIs, workflow rules, and
 domain systems before production. The output is not a toy benchmark score. It
 is replayable launch evidence: who was affected, what failed, which controls
-held, and whether the release is safe enough to continue.
+held, and whether the release should continue, needs controls, or should stop.
 
 ## What We Help Teams Catch
 
