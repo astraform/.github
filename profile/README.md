@@ -30,15 +30,26 @@ held, and whether the release should continue, needs controls, or should stop.
 5. Produce replayable evidence for product, risk, compliance, and engineering
    review.
 
-## Current Wedge
+## Platform Boundary
 
-The first proof is a banking customer outcome wind tunnel: hardship, disputes,
-fraud escalation, support paths, policy changes, and tool-permission changes
-tested before customer-facing AI reaches production.
+Astraform owns simulation time, agents, orchestration, replay, evaluation, and
+outcome evidence.
 
-Banking is the proof domain, not the platform identity. The platform is built
-for any domain where AI decisions, business rules, and customer outcomes have
-to be tested before launch.
+Domain teams own business state, rules, actions, and evidence projections
+through `remote-domain.v1` providers. That boundary lets Astraform test AI
+behavior against customer-owned domain truth without absorbing private domain
+systems into the platform.
+
+## Repository Map
+
+- `platform`: core simulation runtime, contracts, orchestration, evaluation,
+  dashboard, and deployment surfaces.
+- `remote-domain-sdk-java`: Java/Spring author kit, conformance tooling, and
+  starter template for `remote-domain.v1` providers.
+- `remote-domain-sdk-python`: Python/FastAPI author kit, conformance tooling,
+  and starter template for `remote-domain.v1` providers.
+- `remote-domain-samples`: reference provider implementations and sample
+  services.
 
 ## For Domain Engineers
 
@@ -49,6 +60,11 @@ Astraform is protocol-first. Domain teams connect their business world through
 - Astraform owns simulation time, replay, guardrails, and outcome evidence
 - providers expose a manifest and lifecycle operations
 - SDKs and conformance checks keep implementations honest
+
+Official SDKs:
+
+- Java/Spring: `astraform/remote-domain-sdk-java`
+- Python/FastAPI: `astraform/remote-domain-sdk-python`
 
 ## Links
 
